@@ -1,0 +1,70 @@
+// Footer 
+
+// Footer Newsletter
+
+.newsletter {
+    padding: 2.5em 0;
+    background-color: $color-dark;
+    color: $color-white;
+    & h3 {
+        font-size: 1.5em;
+    }
+    & p {
+        font-weight: $fw3;
+        color: $color-border;
+        margin: 0.5em 1.5em;
+        & strong {
+            color: $color-primary;
+        }       
+    }
+    & form {
+        max-width: 500px;
+        width: 100%;
+    }
+}
+
+// Widgets
+
+.widgets{
+    padding: 3.5em 2.5em;
+    background-color: $color-bg-lg;
+}
+
+// Footer Info
+
+.footer-info{
+    padding: 3.5em 0 5em;
+    & .wrapper {
+        & .flexcol {
+            align-items: center;
+            gap: 0;
+        }
+    }
+    & ul {
+        & li a{
+            font-size: 1.25em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: $color-bg-lg;
+            border-radius: 50%;
+            margin: 0.25em;
+            transition: $trans-bg-color;
+            &:hover {
+                background-color: $color-border;
+            }
+        }
+    }
+    & .logo {
+        & a {
+            margin: 0 0 1em -0.75em;
+        }
+    }
+    & .mini-text {
+        margin-top: 2em;
+        text-align: center;
+    }
+
+}

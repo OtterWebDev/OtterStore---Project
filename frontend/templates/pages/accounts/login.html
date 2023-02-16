@@ -1,0 +1,234 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<main>
+    <div class="login">
+        <div class="container">
+            <div class="wrapper flexcenter">
+                <div class="main-content">
+                    <div class="form sing-in active">
+                        <form method="post">
+                            {% csrf_token %}
+                            <h2>Sing in</h2>
+                            <label>
+                                <span>Email Address</span>
+                                <input type="email" name="email">
+                            </label>
+                            <label>
+                                <span>Password</span>
+                                <input type="password" name="password">
+                            </label>
+                            <div class="submit-button">
+                                <button class="submit-button" name="action" value="login" type="submit">Sing in</button>
+                                <p class="forgot-pass">Forgot Password?</p>
+                            </div>
+                        </form>
+                        <div class="social-media">
+                            <ul>
+                                <li><img src="{% static 'images/socialmedia/facebook.png' %}" alt="Facebook Logo"></li>
+                                <li><img src="{% static 'images/socialmedia/instagram.png' %}" alt="Google Logo"></li>
+                                <li><img src="{% static 'images/socialmedia/linkedin.png' %}" alt="Linkedin Logo"></li>
+                                <li><img src="{% static 'images/socialmedia/twitter.png' %}" alt="Twitter Logo"></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="form vendor">
+                        <form method="post" enctype="multipart/form-data">
+                            {% csrf_token %}
+                            <div class="stepv active">
+                                <h2>Vendor</h2>
+                                <label>
+                                    <span>First Name</span>
+                                    {{forms.user.first_name}}
+                                </label>
+                                <label>
+                                    <span>Last Name</span>
+                                    {{forms.user.last_name}}
+                                </label>
+                                <label>
+                                    <span>Birth Date</span>
+                                    {{forms.user.birth_date}}
+                                </label>
+                                <label>
+                                    <span>Phone Number</span>
+                                    {{forms.user.phone_number}}
+                                </label>
+                            </div>
+                            <div class="stepv">
+                                <h2>Vendor Information</h2>
+                                <label>
+                                    <span>Vendor Name io Comapny Name</span>
+                                    {{forms.vendor.vendor_name}}
+                                </label>
+                                <label>
+                                    <span>Vendor License</span>
+                                    {{forms.vendor.vendor_license}}
+                                </label>
+                                <label>
+                                    <span>Vendor Description</span>
+                                    {{forms.vendor.vendor_description}}
+                                </label>
+                            </div>
+                            <div class="stepv">
+                                <h2>Personal Information</h2>
+                                <label>
+                                    <span>Country</span>
+                                    <!-- <select name="country">
+                                        <option value="">Please Select Your Country</option>
+                                        <option value="Brasil">Brasil</option>
+                                        <option value="China">China</option>
+                                        <option value="DPRK">Democratic People's Republic of Korea</option>
+                                        <option value="Vietnam">Vietnam</option>
+                                        <option value="Cuba">Cuba</option>                                  
+                                    </select> -->
+                                    {{forms.user.country}}
+                                </label>
+                                <label>
+                                    <span>State</span>
+                                    {{forms.user.state}}
+                                </label>
+                                <label>
+                                    <span>City</span>
+                                    {{forms.user.city}}
+                                </label>
+                                <label>
+                                    <span>Address</span>
+                                    {{forms.user.address_line}}
+                                </label>
+                            </div>
+                            <div class="stepv security">
+                                <h2>Security</h2>
+                                <label>
+                                    <span>Email Address</span>
+                                    {{forms.user.email}}
+                                </label>
+                                <label>
+                                    <span>Username</span>
+                                    {{forms.user.username}}
+                                </label>
+                                <label>
+                                    <span>Password</span>
+                                    {{forms.user.password}}
+                                </label>
+                                <label>
+                                    <span>Confirm Password</span>
+                                    {{forms.user.confirm_password}}
+                                </label>
+                            </div>
+                            <div class="btn-groupv flexcenter">
+                                <button type="button" class="btn-prev" disabled>Back</button>
+                                <button type="button" class="btn-next">Next</button>
+                                <button name="action" value="user_vendor" type="submit"
+                                    class="btn-submit">Submit</button>
+
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="sub-content">
+                        <div class="img">
+                            <div class="img-text m-1 active">
+                                <h2>New here?</h2>
+                                <p>Sign up and discover great amount of new opportunities!</p>
+                            </div>
+                            <div class="img-text m-2">
+                                <h2>Vendor?</h2>
+                                <p>Sing up and start selling your products!</p>
+                            </div>
+                            <div class="img-text m-3">
+                                <h2>customer?</h2>
+                                <p>Sing up and start shopping!</p>
+                            </div>
+                            <div class="img-btn">
+                                <span class="m-up">Sing Up</span>
+                                <span class="m-in">Sing Up</span>
+                            </div>
+
+                        </div>
+
+                        <div class="form customer active">
+
+                            <form method="post">
+                                {% csrf_token %}
+                                <div class="stepc active">
+                                    <h2>Customer</h2>
+                                    <label>
+                                        <span>First Name</span>
+                                        {{forms.user.first_name}}
+                                    </label>
+                                    <label>
+                                        <span>Last Name</span>
+                                        {{forms.user.last_name}}
+                                    </label>
+                                    <label>
+                                        <span>Birth Date</span>
+                                        {{forms.user.birth_date}}
+                                    </label>
+                                    <label>
+                                        <span>Phone Number</span>
+                                        {{forms.user.phone_number}}
+                                    </label>
+                                </div>
+                                <div class="stepc">
+                                    <h2>Personal Information</h2>
+                                    <label>
+                                        <span>Country</span>
+                                        <!-- <select name="country">
+                                            <option value="">Please Select Your Country</option>
+                                            <option value="Brasil">Brasil</option>
+                                            <option value="China">China</option>
+                                            <option value="DPRK">Democratic People's Republic of Korea</option>
+                                            <option value="Vietnam">Vietnam</option>
+                                            <option value="Cuba">Cuba</option>                                   
+                                        </select> -->
+                                        {{forms.user.country}}
+                                    </label>
+                                    <label>
+                                        <span>State</span>
+                                        {{forms.user.state}}
+                                    </label>
+                                    <label>
+                                        <span>City</span>
+                                        {{forms.user.city}}
+                                    </label>
+                                    <label>
+                                        <span>Address</span>
+                                        {{forms.user.address_line}}
+                                    </label>
+                                </div>
+                                <div class="stepc security">
+                                    <h2>Security</h2>
+                                    <label>
+                                        <span>Email Address</span>
+                                        {{forms.user.email}}
+                                    </label>
+                                    <label>
+                                        <span>Username</span>
+                                        {{forms.user.username}}
+                                    </label>
+                                    <label>
+                                        <span>Password</span>
+                                        {{forms.user.password}}
+                                    </label>
+                                    <label>
+                                        <span>Confirm Password</span>
+                                        {{forms.user.confirm_password}}
+                                    </label>
+                                </div>
+                                <div class="btn-groupc flexcenter">
+                                    <button type="button" class="btn-prev" disabled>Back</button>
+                                    <button type="button" class="btn-next">Next</button>
+                                    <button name="action" value="user" type="submit" class="btn-submit">Submit</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock %}

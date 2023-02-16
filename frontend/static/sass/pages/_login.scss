@@ -1,0 +1,180 @@
+.login {
+    & .wrapper {
+        display: flex;
+        margin-top: 2em;
+        margin-bottom: 2em;
+        
+        
+    }
+}
+
+.main-content{
+    overflow: hidden;
+    position: relative;
+    width: 900px;
+    height: 550px;
+    background: $color-white;
+    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
+
+    &.s-signup {
+        & .sub-content{
+        -webkit-transform:translate3d(-640px, 0, 0);
+        transform:translate3d(-640px, 0, 0);
+        }
+        & .img:before{
+        -webkit-transform:translate3d(640px, 0, 0);
+        transform:translate3d(640px, 0, 0);
+        }
+        & .img-text.m-1, & .img-text.m-3{
+        -webkit-transform:translateX(520px);
+        transform:translateX(520px);
+        }
+        & .img-text.m-2{
+            -webkit-transform:translateX(0);
+                    transform:translateX(0);
+        }
+        & .vendor{
+        -webkit-transition-timing-function:ease-in-out;
+        transition-timing-function:ease-in-out;
+        -webkit-transition-duration:1.2s;
+        transition-duration:1.2s; 
+        -webkit-transform:translate3d(640px, 0, 0);
+        transform:translate3d(640px, 0, 0);
+        }
+
+        & .img-btn span{
+            &.m-2{
+            -webkit-transform:translateY(0);
+            transform:translateY(0);
+            }
+            &.m-1,.m-3{
+            -webkit-transform:translateY(72px);
+            transform:translateY(72px);
+            } 
+        }
+        & .customer{
+            -webkit-transform:translate3d(0, 0, 0);
+                    transform:translate3d(0, 0, 0);
+        }
+    }
+}
+
+.sub-content{
+    overflow: hidden;
+    position: absolute;
+    left: 640px;
+    top: 0;
+    width: 900px;
+    height: 100%;
+    padding-left: 260px;
+    background: $color-white;
+    -webkit-transition: -webkit-transform 1.2s ease-in-out;
+    transition: -webkit-transform 1.2s ease-in-out;
+    transition: transform 1.2s ease-in-out;
+}
+
+.customer{ 
+    -webkit-transform:translate3d(-900px, 0, 0);
+    transform:translate3d(-900px, 0, 0);
+}
+
+.vendor {
+    padding-top: 65px;
+    -webkit-transition-timing-function:ease-out;
+    transition-timing-function:ease-out;
+}
+
+.sign-in{
+    padding-top: 65px;
+    -webkit-transition-timing-function:ease-out;
+    transition-timing-function:ease-out;
+}
+
+.img{
+    overflow: hidden;
+    z-index: 2;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 260px;
+    height: 100%;
+    padding-top: 360px;
+    &:before{
+        content: '';
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 900px;
+        height: 100%;
+        transition: -webkit-transform 1.2s ease-in-out;
+        transition: transform 1.2s ease-in-out, -webkit-transform 1.2s ease-in-out;
+    }
+    &:after{
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: $color-secondary;
+    }
+}
+
+.img-text{
+    z-index: 2;
+    position: absolute;
+    left: 0;
+    top: 50px;
+    width: 100%;
+    padding: 0 20px;
+    text-align: center;
+    color: #fff;
+    -webkit-transition:-webkit-transform 1.2s ease-in-out;
+    transition: -webkit-transform 1.2s ease-in-out;
+    transition: transform 1.2s ease-in-out, -webkit-transform 1.2s ease-in-out;
+    & h2{
+        margin-bottom: 10px;
+        font-weight: normal;
+    }
+    & p{
+        font-size: 14px;
+        line-height: 1.5;
+    }
+    &.m-2{
+    -webkit-transform:translateX(-520px);
+    transform:translateX(-520px);
+    }
+    &:not(.m-2,.active){
+        display: none;
+    }
+}
+
+.forgot-pass{
+    margin-top: 15px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 600;
+    color: #0c0101;
+    cursor: pointer;
+    &:hover{
+        color: red;
+    }
+}
+
+.social-media{
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+    & ul{
+        list-style: none;
+        & li{
+            display: inline-block;
+            cursor: pointer;
+            margin: 25px 15px;
+        }
+    }
+    & img{
+        width: 40px;
+        height: 40px;
+      }
+}

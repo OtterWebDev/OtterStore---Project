@@ -1,0 +1,68 @@
+// Bottom Menu
+
+.menu-bottom {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 60px;
+    background-color: $color-white;
+    box-shadow: 0 -2px 10px rgb(0 0 0 /10%);
+    z-index: 900;
+    & nav li {
+        flex: 1;
+        & a {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0.5em 0;
+            color: $color-text-lg;
+            transition: $trans-color;
+            &:hover {
+                color: $color-dark;
+            }
+            & span {
+                font-size: $font-small;
+            }
+            & i {
+                font-size: 1.25em;
+            }
+        }   
+    }
+    & .fly-item {
+        right: 50%;
+        width: 16px;
+        border-radius: 50%;
+        margin-right: -20px;
+        background-color: $color-secondary-dark;
+    }
+
+}
+
+// Search Bottom
+
+.search-bottom {
+    position: fixed;
+    bottom: 60px;
+    width: 100%;
+    padding: 2.5em 0;
+    background-color: $color-secondary-dark;
+    z-index: 1000;
+    visibility: hidden;
+    opacity: 0;
+    will-change: visibility,opacity;
+    & .t-close {
+        position: absolute; 
+        top: -54px;
+        right: 0;
+        &:hover{
+            background-color: $color-primary;
+        }
+    }
+}
+
+.showsearch .search-bottom{
+    visibility: inherit;
+    opacity: 1;
+}

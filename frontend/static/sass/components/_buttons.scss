@@ -1,0 +1,154 @@
+// Buttons 
+
+.primary-button, .secondary-button, .light-button {
+    font-size: $font-small;
+    padding: 0.9em 2em;
+    height: auto;
+    width: fit-content;
+    border-radius: 2em;
+    transform: $trans-bg-color;
+
+}
+
+.primary-button {
+    background-color: $color-primary;
+    color: $color-white;
+    &:hover{
+        background-color: $color-secondary-dark;
+    }
+}
+
+.secondary-button {
+    background-color: $color-secondary-dark;
+    color: $color-white;
+    &:hover{
+        background-color: $color-bg-lg;
+        color: $color-secondary-dark;
+    }
+}
+
+.light-button {
+    background-color: $color-bg-lg;
+    &:hover{
+        background-color: $color-secondary-dark;
+        color: $color-white
+    }
+}
+
+.viewl-all {
+    font-size: $font-small;
+    display: flex;
+    gap: 1em;
+    transition: $trans-color;
+}
+
+/// Login Buttons
+
+.img-btn{
+    overflow: hidden;
+    z-index: 2;
+    position: relative;
+    width: 100px;
+    height: 36px;
+    margin: 0 auto;
+    background: transparent;
+    color: $color-white;
+    text-transform: uppercase;
+    font-size: 15px;
+    cursor: pointer;
+    &:after{
+        content: '';
+        z-index: 2;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100px;
+        height: 100%;
+        border: 2px solid $color-white;
+        border-radius: 30px;
+    }
+    & span{
+        position: absolute;
+        left: 0;
+        top: 0;
+        display: -webkit-box;
+        display: flex;
+        -webkit-box-pack:center;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        -webkit-transition:-webkit-transform 1.2s;
+        transition: -webkit-transform 1.2s;
+        transition: transform 1.2s;
+        transition: transform 1.2s, -webkit-transform 1.2s;
+        &.m-in{
+        -webkit-transform:translateY(-72px);
+        transform:translateY(-72px);
+        }
+    }
+}
+
+.submit-button > button {
+    display: block;
+    margin: 0 auto;
+    width: 260px;
+    height: 36px;
+    border-radius: 30px;
+    color: #fff;
+    font-size: $font-big;
+    cursor: pointer;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-family: 'Rubik', sans-serif;
+    background-color: $color-primary;
+    color: $color-white;
+    &:hover{
+        background-color: $color-secondary-dark;
+} 
+}
+.btn-groupv, .btn-groupc {
+    display: flex;
+    gap: 1em;
+    margin-top: 2em;
+    text-transform: uppercase;
+    & [class*="btn-"] {
+        background-color: $color-primary;
+        color: $color-white;
+        padding: 1em 2.5em;
+        border: 4px solid $color-border;
+        border-radius: 30px;
+        cursor: pointer;
+        -webkit-transition: background-color .3s,border-color .3s ease-out;
+        transition: background-color .3s,border-color .3s ease-out;
+        
+        &:disabled{
+            background-color: $color-bg-lg;
+            border: $color-light;
+            cursor: text;
+        }
+        &:hover:not(:disabled){
+            background-color: $color-secondary-dark;
+        }
+    }
+}
+
+
+
+
+
+.btn-groupv .btn-submit, .security.active ~ .btn-groupv .btn-next{
+    display: none;
+}
+.security.active ~ .btn-groupv .btn-submit{
+    display: block;
+}
+
+.btn-groupc .btn-submit, .security.active ~ .btn-groupc .btn-next{
+    display: none;
+}
+.security.active ~ .btn-groupc .btn-submit{
+    display: block;
+}

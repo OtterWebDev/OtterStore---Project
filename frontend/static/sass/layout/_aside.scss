@@ -1,0 +1,103 @@
+// Responsive Menu
+
+.site-off {
+    position: fixed;
+    width: 320px;
+    height: 100%;
+    background-color: $color-white;
+    overflow-y: auto;
+    z-index: 1000;
+    transform: translateX(-100%);
+    visibility: hidden;
+    transition: transform .4s, visibility .4s;
+    will-change: transform,visibility;
+}
+
+.showmenu .site-off {
+    transform: translateX(0);
+    visibility: visible;
+    transform: transform .4s, visibility 0s 0s ;
+}
+
+.off-canvas {
+    
+    height: 100%;
+    touch-action: auto;
+    padding: 1.5em;
+    & .canvas-head{
+        color: $color-white;
+        justify-content: space-between;
+        padding: 1.5em;
+        margin: -1.5em -1.5em 1.5em;
+        background-color: $color-secondary-dark;
+        border-bottom-right-radius: 160px 25px;
+        & .logo {
+            z-index: 10;
+            position: relative;
+
+        }
+    }
+    & .dpt-head {
+        font-size: $font-small;
+        padding: 1em;
+        margin-bottom: 1em;
+        text-align: center;
+        background-color: $color-bg-lg;
+        border-radius: 7px 7px 0 0;
+    }
+    & .has-child > :where(ul,.mega){
+        font-size: $font-small;
+        font-weight: $fw3;
+        line-height: 28px;
+        padding-left: 3em;
+        height: auto;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-heigth .3s cubic-bezier(0.215, 0.610, 0.355, 1);
+    }
+    & .thetop-nav ul,  nav > ul {
+        flex-direction: column;
+        align-items: flex-start;
+        font-size: $font-small;
+        line-height: 36px;
+        padding-top: 1.25em;
+        margin: 1.25em 0;
+        border-top: 1px solid $color-border;
+    }
+    & nav .mega{
+        padding: 0;
+        & .products {
+            display: none;
+        }
+    }
+    & .has-child {
+        width: 100%;
+        & .icon-small{
+            padding: 0.5em;
+            line-height: initial;
+        }
+        
+    }
+    & .dpt-menu {
+        & .icon-small i {
+            transform: rotate(90deg);
+        }
+    }
+    & .thetop-nav .right > ul > :where(:nth-child(4),li:nth-child(5)) > a {
+        display: none;
+    }
+    & .thetop-nav .right ul ul {
+        display: flex;
+        flex-direction: row;
+        & li a {
+            padding: 0.5em;
+            border: 1px solid $color-border;
+            line-height: 16px;
+            margin: 0 0.4em 0.4em 0;
+        }
+    }
+    & .expand > :where(ul,.mega){
+        max-height: 2000px;
+    }
+
+}

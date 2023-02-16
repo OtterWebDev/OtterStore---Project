@@ -1,0 +1,296 @@
+@media screen and (min-width: 481px){
+    .products {
+        &.main .item {           
+        flex: 0 0 100%;           
+        }
+        &.mini {
+        flex: 0 0 50%;
+        }               
+    }
+
+
+}
+
+
+@media screen and (min-width: 768px){
+    .products{
+        & .price{
+            & .current{
+                font-size: 1.25em;
+            }
+        }  
+    } 
+
+    .products {
+        &.main{
+            & .item{
+                flex: 0 0 30%;
+            }
+        }
+        &.mini {
+            flex: 0 0 50%;
+            } 
+        &.big{
+            flex: 0 0 100%;
+            margin-bottom: 2em;
+        }
+
+    }
+    .banner .row{
+        flex: 0 0 40%;
+    }
+    .wigdets .row {
+        flex: 0 0 50%;
+    }
+
+    /* .form-box {
+        flex-direction: row;
+
+        & .progress{
+            flex: 1 0 35%;
+            min-width: 300px;
+            padding: 3em;
+        }
+        & form {
+            padding: 3em;
+            border-radius: 0 15px 15px 0;
+        }
+    }
+    .logo {
+        margin: -48px -48px 48px;
+    }
+    */
+} 
+
+
+
+
+@media screen and (min-width: 992px) {
+
+    // Geral
+
+    .container {
+        padding: 0 2em;
+    }
+
+    .desktop-hide {
+        display: none !important;
+    }
+
+    .mobile-hide{
+        display: block !important;
+    }
+
+    // Header
+
+    .header-nav{
+        padding: 0;
+        margin: 0;
+        border-bottom: 0;
+        & .right{
+            & li > a{
+                margin-left: 1em;
+            }
+        }
+    }
+
+    .logo a{
+        margin-right: 2em;
+    }
+
+    // Header Nav Mega Menu
+    nav {
+        & .mega {
+            position: absolute;
+            width: 100%;
+            height: auto;
+            top: auto;
+            left: 0;
+            right: 0;
+            padding: 2.5em;
+            line-height: 2em;
+            background-color: $color-bg-lg;
+            box-shadow: rgb(0 0 0 / 20%) 0 30px 20px -30px;
+            z-index: 100;
+            display: none;
+            & .wrapper {
+                display: flex;
+                   
+            }
+            & h4 {
+                font-size: 0.8em;
+                text-transform: uppercase;
+            }
+            & ul{
+                font-size: $font-small;
+            }
+            & .women-brands{
+                display: flex;
+                flex-wrap: wrap;
+                max-width: 180px;
+                & li{
+                    min-width: 80px;
+                }
+            }
+            & .view-all{
+                margin-top: 1em;
+            }
+            & .products{
+                flex: 2;
+                padding: 0;
+                align-items: center;
+                position: relative;
+                & .row {
+                    width: 100%;
+                }
+                & .media {
+                    height: 400px;
+                }
+                & .text-content {
+                    line-height: initial;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 0.5em;
+                    margin-top: 0.5em;
+                    position: absolute;
+                    bottom: 4em;
+                    width: 100%;
+                    & h4 {
+                        font-size: 2em;
+                        font-weight: $fw8;
+                        align-items: center;
+                        color: $color-secondary-dark;
+                    }
+                }
+            }
+        }
+        & li {
+            &.has-child:hover{
+                & .mega {
+                    display: block;
+                }
+            }
+        }
+    }
+
+    // Nav Header 
+
+    .main-nav {
+        & .right {
+           max-width: 600px;
+           margin-left: auto;
+            
+        }
+    }
+
+    // Departments Menu
+    .dpt-menu{
+        position: absolute;
+        top: 100%;
+        width: 300px;
+        background-color: $color-white;
+        border: 1px solid $color-border;
+        border-top: 0;
+        border-bottom: 0;   
+        & > ul{
+            & > li {
+                & > a{
+                    font-weight: $fw5;
+                    padding: 0 1.5em;
+                    border-bottom: 1px solid $color-border
+                }
+            }
+        }
+        & .has-child > ul, .mega {
+            position: absolute;
+            top: 0;
+            left: 100%;
+            width: 100%;
+            height: auto;
+            min-height: 100%;
+            padding: 1.5em;
+            font-size: $font-small;
+            line-height: 2.5em;
+            border: 1px solid $color-border;
+            border-top: 0;
+            display: none;
+            background-position: right bottom;
+            background-repeat: no-repeat;
+            background-size: auto;   
+        }
+        
+        
+        & .beauty ul {
+            background-image: url(../../images/menu/menu_bg1.jpg);
+        }
+        
+        & .has-child > :where(ul,.mega)::before{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(90deg,rgba(225,225,225,1)0%,rgba(225,225,225,0)20%);         
+        }
+        & .mega {
+            height: auto;
+            min-width: 100%;           
+        } 
+        & .has-child:hover .mega{
+            display: flex;
+
+        }
+    }
+
+    // Slider 
+
+    .slider > div > .wrapper {
+        width: calc(100% - (300px + 2em));
+        margin-left: auto;
+    }
+
+    // Trending Products
+
+    .trending {
+        & .products {
+            flex: 0 0 30%;
+        }
+    }
+
+
+
+
+    // Products 
+
+    .products{
+        &.big{
+            & .media {
+                max-height: 373px;
+            }
+        }
+        &.mini {
+            flex: 0 0 25%;
+        }
+    }
+
+    .product-categories .row{
+        flex: 0 0 30%;
+    }
+
+    // Footer
+
+    .newsletter {
+        & .box {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+    .wigdets .row {
+        flex: 0 0 25%;
+    }
+
+    
+}

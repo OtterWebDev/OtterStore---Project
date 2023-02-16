@@ -1,0 +1,50 @@
+// Banner 
+
+.banners{
+    & .item {
+        position: relative;
+        background-color: $color-white;
+        border: 1px solid $color-border;       
+    }
+    & .product-categories{
+        & .item {
+            display: flex;
+            padding: 1.5em;
+        }
+        & .image{
+            max-width: 150px;
+        }
+    }
+    & .second-links {
+        margin-top: 2em;
+    }
+}
+
+.banner {
+    margin-bottom: 2em;
+    
+    & .image {
+        text-align: right;
+    }
+    & :where(.text-content, .over-link){
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%; 
+    }
+    & .text-content {
+        padding: 1.5em 2.5em;
+
+    }
+    & h3 {
+        font-size: calc(1em + 0.5vw);
+        font-weight: $fw3;
+        & span {
+            font-size: 80%;
+        }
+    }
+    & .primary-button {
+        z-index: 3;
+    }
+}

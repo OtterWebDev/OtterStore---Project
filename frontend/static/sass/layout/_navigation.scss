@@ -1,0 +1,73 @@
+// Nav Header
+
+nav li > a {
+    display: flex;
+    position: relative;
+    line-height: inherit;
+    transition: $trans-color
+}
+
+
+.main-nav {
+    background-color: $color-secondary-dark;
+    padding: 1.5em 0;
+    margin-bottom: 2em;
+
+    & .right {
+        flex: 1;
+    }
+}
+
+.dpt-cat {
+    position: relative;
+    z-index: 10;
+    & {
+        .dpt-head{
+            position: relative;
+            width: 300px;
+            padding: 0.75em 1.5em;
+            background-color: $color-primary;
+            border-radius: 7px 7px 0 0;
+            color: $color-white;
+            margin-bottom: -2.15em;
+            & {
+                .mini-text{
+                    color: $color-bg-lg;
+                }
+            }
+        }
+
+        & .dpt-trigger{
+            position: absolute;
+            right: 0;
+            top: 0;
+            padding: 1.3em;
+            height: 60px;
+            //width: 60px;
+        }
+    }
+}
+
+.dpt-menu {
+    width: 100%;
+    
+    & > ul {
+        & > li {
+            & > a{
+                font-size: $font-small;
+                height: 46px;
+                align-items: center;
+            }
+        }
+    }
+
+    & .has-child{
+        &:hover ul {
+        display: block;
+        }
+        & li a:hover {
+            text-decoration: underline;
+        }
+}
+}
+

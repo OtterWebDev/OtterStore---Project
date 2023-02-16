@@ -1,0 +1,12 @@
+{
+  "name": "frontend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "sass static/sass/main.scss static/css/style.css -w"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

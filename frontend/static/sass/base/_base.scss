@@ -1,0 +1,47 @@
+// Global Reset
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    &::before,after{
+        box-sizing: border-box;
+    }
+}
+
+
+
+body {
+    background-color: $color-white;
+    
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    -webkit-tap-highlight-color: transparent;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100% !important;
+    vertical-align: middle;
+}
+
+strong {
+    font-weight: $fw8;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+input {
+    &::placeholder{
+        font: inherit;
+    }
+}
